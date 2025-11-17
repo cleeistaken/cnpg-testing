@@ -10,6 +10,8 @@ if not VU_ARG:
 else:
     vu = int(VU_ARG)
 
+print(f"Using {vu} vCPU <--------------------------------------------------------------------------")
+
 print("SETTING CONFIGURATION")
 dbset('db','pg')
 dbset('bm','TPC-C')
