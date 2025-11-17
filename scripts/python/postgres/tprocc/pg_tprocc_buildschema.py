@@ -14,7 +14,7 @@ print("SETTING CONFIGURATION")
 dbset('db','pg')
 dbset('bm','TPC-C')
 
-diset('connection','pg_host','cluster-sample-rw')
+diset('connection','pg_host','cnpg-postgres-cluster-rw')
 diset('connection','pg_port','5432')
 diset('connection','pg_sslmode','prefer')
 
