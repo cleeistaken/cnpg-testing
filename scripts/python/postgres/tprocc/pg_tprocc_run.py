@@ -10,7 +10,7 @@ if not VU_ARG:
 else:
     vu = int(VU_ARG)
 
-print(f"Using {vu} vCPU")
+print(f"Using {vu} vCPU <--------------------------------------------------------------------------")
 
 tmpdir = os.getenv('TMP')
 
