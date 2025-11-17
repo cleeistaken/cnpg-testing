@@ -1,6 +1,15 @@
 #!/bin/tclsh
 # maintainer: Pooja Jain
 import os
+
+print("Get Parameters")
+VU_ARG = os.getenv('VU')
+if not VU_ARG:
+    print("Using default number of CPU")
+    vu = tclpy.eval('numberOfCPUs')
+else:
+    vu = int(VU_ARG)
+
 tmpdir = os.getenv('TMP')
 
 print("SETTING CONFIGURATION")
@@ -27,7 +36,7 @@ diset('tpcc','pg_vacuum','true')
 
 loadscript()
 print("TEST STARTED")
-vuset('vu','vcpu')
+vuset('vu', vu)
 vucreate()
 tcstart()
 tcstatus()

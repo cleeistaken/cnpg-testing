@@ -15,7 +15,7 @@ for item in "${TEST_CASES[@]}"; do
   echo "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-"
   echo "RUN HAMMERDB TEST"
   echo "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-"
-  ./hammerdbcli py auto ./scripts/python/postgres/tprocc/pg_tprocc_run.py
+  VU=$item ./hammerdbcli py auto ./scripts/python/postgres/tprocc/pg_tprocc_run.py
   echo "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-"
   echo "DROP HAMMERDB SCHEMA"
   ./hammerdbcli py auto ./scripts/python/postgres/tprocc/pg_tprocc_deleteschema.py
