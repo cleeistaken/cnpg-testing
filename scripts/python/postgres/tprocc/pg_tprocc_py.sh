@@ -1,4 +1,4 @@
-TEST_CASES=(1 2 4 8 16 32 64)
+TEST_CASES=(3 6 12 24 48 96)
 
 for item in "${TEST_CASES[@]}"; do
   echo "RUNNING TEST CASE $item"
